@@ -39,7 +39,7 @@ RUN apk add --update --no-cache --virtual=build-deps boost-dev g++ make zlib-dev
     && apk del build-deps \
     && apk add --update --no-cache boost zlib \
     && rm -rf /var/cache/apk \
-    && mkdir /var/cache/apk
+    && mkdir /var/cache/apk \
     && rm -rf /root/.cache
 
 CMD /bin/sh
